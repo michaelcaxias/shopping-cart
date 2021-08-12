@@ -69,7 +69,7 @@ const clickButtonCart = () => {
     fetch(`https://api.mercadolibre.com/items/${clickedItem}`)
   .then((response) => response.json())
   .then((ObjectOfProducts) => getInfosCart(ObjectOfProducts))
-  .then((oot) => cartItems.appendChild(createCartItemElement(oot)));
+  .then((elementToCart) => cartItems.appendChild(createCartItemElement(elementToCart)));
   }));
 };
 
