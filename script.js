@@ -60,4 +60,6 @@ function createCartItemElement({ sku, name, salePrice }) {
   return li;
 }
 
-window.onload = () => {fetchApi()};
+window.onload = () => { 
+  fetchApi();
+};
