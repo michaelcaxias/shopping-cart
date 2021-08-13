@@ -1,4 +1,6 @@
 const cartItems = document.querySelector('.cart__items');
+const loading = document.querySelector('.loading');
+const sectionItems = document.querySelector('.items');
 
 function saveCart() {
   localStorage.setItem('cartItems', cartItems.innerHTML);
@@ -53,7 +55,6 @@ function createCartItemElement({ sku, name, salePrice }) {
 }
 
 function getInfosApi(object) {
-  const sectionItems = document.querySelector('.items');
   const infos = object.map((element) => ({
      sku: element.id,
      name: element.title,
@@ -106,6 +107,7 @@ async function fetchApi() {
   const data = json.results;
   getInfosApi(data);
   clickButtonCart();
+  loading.parentNode.removeChild(loading);
 }
 fetchApi();
 
