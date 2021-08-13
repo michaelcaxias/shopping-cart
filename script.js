@@ -39,8 +39,7 @@ function getSkuFromProductItem(item) {
 }
 
 function cartItemClickListener(event) {
-  const clickedItemParent = event.target.parentNode;
-  clickedItemParent.removeChild(event.target);
+  event.target.remove('li');
   saveCart();
 }
 cartItems.addEventListener('click', cartItemClickListener);
