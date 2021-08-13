@@ -64,6 +64,10 @@ function getInfosCart(object) {
 const clickButtonCart = () => {
   const cartItems = document.querySelector('.cart__items');
   const addButton = document.querySelectorAll('.item__add');
+  const emptyCart = document.querySelector('.empty-cart');
+  emptyCart.addEventListener('click', () => {
+    cartItems.innerHTML = '';
+  });
   addButton.forEach((button) => button.addEventListener('click', (event) => {
     const clickedItem = event.target.parentNode.firstChild.innerText;
     fetch(`https://api.mercadolibre.com/items/${clickedItem}`)
