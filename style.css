@@ -85,8 +85,10 @@ body {
   width: 100%;
 }
 
-.item .item__add {
+.item .item__add , .empty-cart {
   background-color: rgb(61, 136, 250);
+  border-radius: 5px;
+  color: rgb(209, 255, 255);
   font-weight: 900;
   border: 0;
   cursor: pointer;
@@ -102,8 +104,24 @@ body {
   background-color: rgb(209, 209, 209);
 }
 
+.cart__item {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  transition: 0.5s;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.178);
+}
+
+.cart__item:hover {
+  padding: 1.5rem;
+  font-weight: 900;
+  box-shadow: 1px 1px 5px black;
+}
+
 .cart .cart__title {
   flex-basis: 1;
-  font-size: 16pt;
+  font-size: 16px;
   text-align: center;
 }
