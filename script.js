@@ -1,6 +1,7 @@
 const cartItems = document.querySelector('.cart__items');
 const loading = document.querySelector('.loading');
 const sectionItems = document.querySelector('.items');
+const inputSearch = document.querySelector('.input');
 
 function saveCart() {
   localStorage.setItem('cartItems', cartItems.innerHTML);
@@ -99,7 +100,7 @@ async function clickButtonCart() {
   }));
 }
 
-const url = 'https://api.mercadolibre.com/sites/MLB/search?q=computador';
+const url = `https://api.mercadolibre.com/sites/MLB/search?q=${inputSearch.value}`;
 
 async function fetchApi() {
   const response = await fetch(url);

@@ -1,5 +1,43 @@
 * {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(237, 237, 237);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 241, 89);
+  padding: 1.5rem;
+}
+
+.logo-desktop {
+  width: 10rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: unset;
+  width: 20rem;
+}
+
+.search-section {
+  display: flex;
+}
+
+.search-icon {
+  width: 1.5rem;
+}
+
+.search-button {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  width: 3rem;
 }
 
 .container {
@@ -16,14 +54,21 @@
 }
 
 .item {
-  border: 2px solid blue;
   border-radius: 5px;
+  background-color: white;
+  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: auto;
   margin: 5px;
   width: 200px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.178);
+  transition: 0.5s;
+}
+
+.item:hover {
+  width: 210px;
 }
 
 .item .item__sku {
@@ -41,17 +86,20 @@
 }
 
 .item .item__add {
-  background-color: green;
+  background-color: rgb(61, 136, 250);
+  font-weight: 900;
   border: 0;
   cursor: pointer;
   margin: 0;
-  padding: 5px;
+  padding: 0.5rem;
 }
 
 .cart {
   display: flex;
   flex-basis: 30%;
   flex-flow: column wrap;
+  padding: 1.5rem;
+  background-color: rgb(209, 209, 209);
 }
 
 .cart .cart__title {
