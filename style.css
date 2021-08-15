@@ -115,14 +115,14 @@ body {
   cursor: pointer;
   background-color: white;
   border-radius: 5px;
-  margin-top: 0.5rem;
+  margin-top: 0.5em;
   padding: 1rem;
   transition: 0.5s;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.178);
 }
 
 .cart__item:hover {
-  padding: 1.5rem;
+  padding: 1.2rem;
   font-weight: 900;
   box-shadow: 1px 1px 5px black;
 }
