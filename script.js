@@ -96,7 +96,7 @@ async function getInfosCart(object) {
 function clearCart() {
   const emptyCart = document.querySelector('.empty-cart');
   emptyCart.addEventListener('click', () => {
-    price = 0;
+    totalPrice.innerHTML = 0;
     cartItems.innerHTML = '';
     saveCart();
   });
