@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -20,11 +21,13 @@
       <section class="items">
         <span class="loading">loading...</span>
       </section>
-      <section class="cart">
-        <span class="cart__title">Carrinho de compras</span>
-        <button class="empty-cart">Esvaziar carrinho</button>
-        <ol class="cart__items"></ol>
-        <p class="price">Preço total: <span class="total-price">0</span></p>
+      <section class="cart-section">
+        <span class="cart__title"><i class="fas fa-shopping-cart"></i> Carrinho de compras</span>
+        <section class="cart">
+          <ol class="cart__items"></ol>
+          <button class="empty-cart">Esvaziar carrinho</button>
+          <p class="price">Preço total: <span class="total-price">0</span></p>
+        </section>
       </section>
     </section>
     <script src="script.js"></script>

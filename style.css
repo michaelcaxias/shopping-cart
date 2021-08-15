@@ -96,10 +96,17 @@ body {
   padding: 0.5rem;
 }
 
+.cart-section {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+}
+
 .cart {
   display: flex;
   flex-basis: 30%;
   flex-flow: column wrap;
+  gap: 1.5rem;
   padding: 1.5rem;
   background-color: rgb(209, 209, 209);
 }
@@ -120,13 +127,17 @@ body {
   box-shadow: 1px 1px 5px black;
 }
 
-.cart .cart__title {
+.cart__title {
   flex-basis: 1;
+  background-color: white;
+  color: rgb(61, 136, 250);
+  font-weight: 900;
+  padding: 1em;
   font-size: 16px;
   text-align: center;
 }
 
 .price {
-  margin-top: 1rem;
+  font-weight: 900;
   text-align: center;
 }
