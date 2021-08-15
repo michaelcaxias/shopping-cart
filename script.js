@@ -64,8 +64,11 @@ function getSkuFromProductItem(item) {
 }
 
 function cartItemClickListener(event) {
-  decreasePrices(event);
-  event.target.remove();
+  const click = event.target;
+  if (click.innerHTML.split('|').length === 3) {
+    decreasePrices(event);
+    click.remove();
+  }
   saveCart();
 }
 cartItems.addEventListener('click', cartItemClickListener);
