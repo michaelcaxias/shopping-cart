@@ -65,7 +65,7 @@ function getSkuFromProductItem(item) {
 
 function cartItemClickListener(event) {
   decreasePrices(event);
-  event.target.remove('li');
+  event.target.remove();
   saveCart();
 }
 cartItems.addEventListener('click', cartItemClickListener);
