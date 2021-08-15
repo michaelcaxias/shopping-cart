@@ -4,6 +4,8 @@ const sectionItems = document.querySelector('.items');
 const searchButton = document.querySelector('.search-button');
 const inputButton = document.querySelector('.input');
 const items = document.querySelector('.items');
+const totalPrice = document.querySelector('.total-price');
+let price = 0;
 
 function saveCart() {
   localStorage.setItem('cartItems', cartItems.innerHTML);
@@ -11,6 +13,20 @@ function saveCart() {
 
 function getSavedCart() {
   cartItems.innerHTML = localStorage.getItem('cartItems');
+}
+
+function sumPrices(salePrice) {
+  price += salePrice;
+  const roundNumber = Math.round(price * 100) / 100;
+  totalPrice.innerHTML = roundNumber;
+}
+
+function decreasePrices(event) {
+  const getStringPrice = event.target.innerHTML.split('PRICE: $')[1];
+  const getNumberPrice = Number(getStringPrice);
+  price -= getNumberPrice;
+  const roundNumber = Math.round(price * 100) / 100;
+  totalPrice.innerHTML = roundNumber;
 }
 
 function createProductImageElement(imageSource) {
@@ -44,6 +60,7 @@ function getSkuFromProductItem(item) {
 }
 
 function cartItemClickListener(event) {
+  decreasePrices(event);
   event.target.remove('li');
   saveCart();
 }
@@ -53,8 +70,8 @@ function createCartItemElement({ sku, name, salePrice }) {
   const li = document.createElement('li');
   li.className = 'cart__item';
   li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
-  li.addEventListener('click', cartItemClickListener);
-  return li;
+  sumPrices(salePrice);
+  return cartItems.appendChild(li);
 }
 
 function getInfosApi(object) {
@@ -79,6 +96,7 @@ async function getInfosCart(object) {
 function clearCart() {
   const emptyCart = document.querySelector('.empty-cart');
   emptyCart.addEventListener('click', () => {
+    price = 0;
     cartItems.innerHTML = '';
     saveCart();
   });
