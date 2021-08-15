@@ -125,3 +125,8 @@ body {
   font-size: 16px;
   text-align: center;
 }
+
+.total-price {
+  margin-top: 1rem;
+  text-align: center;
+}

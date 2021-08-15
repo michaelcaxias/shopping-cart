@@ -11,10 +11,10 @@
   <body>
     <header class="header">
       <img class="logo-desktop" src="images/logo-desktop.png">
-      <form class="search-section">
+      <div class="search-section">
         <input type="text" class="input" placeholder="Buscar produtos, marcas e muito mais">
-        <button class="search-button" type="submit"><img class="search-icon" src="images/search-icon.svg"></button>
-      </form>
+        <button class="search-button"><img class="search-icon" src="images/search-icon.svg"></button>
+      </div>
     </header>
     <section class="container">
       <section class="items">
@@ -24,6 +24,7 @@
         <span class="cart__title">Carrinho de compras</span>
         <button class="empty-cart">Esvaziar carrinho</button>
         <ol class="cart__items"></ol>
+        <p class="total-price">Preço total:</p>
       </section>
     </section>
     <script src="script.js"></script>
