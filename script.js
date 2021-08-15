@@ -9,10 +9,14 @@ let price = 0;
 
 function saveCart() {
   localStorage.setItem('cartItems', cartItems.innerHTML);
+  localStorage.setItem('totalPrice', totalPrice.innerHTML);
 }
 
 function getSavedCart() {
   cartItems.innerHTML = localStorage.getItem('cartItems');
+  const priceLocalStorage = Number(localStorage.getItem('totalPrice'));
+  price = priceLocalStorage;
+  totalPrice.innerHTML = priceLocalStorage;
 }
 
 function sumPrices(salePrice) {
