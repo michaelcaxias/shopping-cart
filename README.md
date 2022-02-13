@@ -4,12 +4,19 @@
 
 Projeto feito de forma individual durante o curso da [Trybe](https://www.betrybe.com/) com o objetivo de criar um carrinho de compras com consumo de API.
 
-## 🔧 Funçoes
+## ⭐ Habilidades
 
 - Utilizar as habilidades de Javascript, CSS e HTML.
 - Consumir API's utilizando Fetch e inserindo informações no DOM.
 
-## Como iniciar
+## 🔧 Funçoes
+
+- Pesquisar por produtos
+- Adicionar produtos ao carrinho de compras
+- Somar preço dos produtos
+- Remover produtos do carrinho
+
+## 💻 Como iniciar
 
 1. Faça o clone do projeto
 2. Entre no Visual Studio Code
